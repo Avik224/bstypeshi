@@ -1,9 +1,15 @@
-from PySide6.QtWidgets import QApplication, QLabel
 import sys
+from PySide6.QtWidgets import QApplication
 
-app = QApplication(sys.argv)
-label = QLabel('EcoLens AI\nStage 1 in progress...')
-label.resize(500,200)
-label.setWindowTitle('EcoLens AI')
-label.show()
-sys.exit(app.exec())
+from ui.main_window import MainWindow
+
+
+def main():
+    app = QApplication(sys.argv)
+    window = MainWindow()
+    window.show()
+    sys.exit(app.exec())
+
+
+if __name__ == '__main__':
+    main()
